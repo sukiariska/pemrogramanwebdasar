@@ -1,9 +1,11 @@
 <?php
-//session_start();
-if(!empty($_SESSION['username_rental_mobil'])){
-  header('lacation:home');
-}
-?>
+    //session_start();
+    if(!empty($_SESSION['username_rental_mobil'])){
+        header('location:home');
+        }
+
+    ?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
     <head><script src="../assets/js/color-modes.js"></script>
@@ -13,7 +15,7 @@ if(!empty($_SESSION['username_rental_mobil'])){
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>SuRider - Sistem Informasi Layanan Rental Mobil</title>
+    <title>SuRider-Sistem Informasi Manajemen Rental Mobil</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -157,7 +159,7 @@ if(!empty($_SESSION['username_rental_mobil'])){
 
     
 <main class="form-signin w-100 m-auto">
-    <form class="needs-validation" novalidate action="proses/proses_login.php" method="post">
+    <form class="needs-validation" novalidate action="proses/proses_login.php" method="POST">
     <i class="bi bi-car-front fs-1"></i>
     <h1 class="h3 mb-3 fw-normal">Please login</h1>
 
@@ -169,10 +171,10 @@ if(!empty($_SESSION['username_rental_mobil'])){
         </div>
     </div>
     <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+        <input  name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
         <label for="floatingPassword">Password</label>
         <div class="invalid-feedback">
-        Masukkan Password.
+        Masukkan Password .
         </div>
     </div>
 
@@ -183,7 +185,7 @@ if(!empty($_SESSION['username_rental_mobil'])){
         </label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
-    <p class="mt-5 mb-3 text-body-secondary">&copy; 2023–2024</p>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2024–2025</p>
     </form>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
@@ -209,5 +211,5 @@ if(!empty($_SESSION['username_rental_mobil'])){
 })()
 </script>
 
-  </body>
+    </body>
 </html>
