@@ -8,7 +8,7 @@ $TglSewa = (isset( $_POST['TglSewa'])) ? htmlentities( $_POST['TglSewa']): "" ;
 $Lama = (isset( $_POST['Lama'])) ? htmlentities( $_POST['Lama']): "" ;
 $Total = (isset( $_POST['Total'])) ? htmlentities( $_POST['Total']): "" ;
 
-if(!empty ($_POST['input_costumer_validate'])){
+if(!empty ($_POST['input_sewa_validate'])){
     $select = mysqli_query($conn, "SELECT * FROM tbsewa WHERE idSewa = '$idSewa'");
     if(mysqli_num_rows($select)> 51){
         $message = '<script>alert("Sewa Yang Dimasukkan Telah Ada");
