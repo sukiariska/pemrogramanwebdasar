@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>SuRider-Sistem Informasi Manajemen Rental Mobil</title>
+    <title>SuRider - Sistem Informasi Manajemen Rental Mobil Berbasis Web</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -184,6 +184,15 @@
         Remember me
         </label>
     </div>
+    <div>
+        <label for="floatingPassword">
+            username : admin@admin.com <br>
+            password : password
+        </label>
+        <div class="invalid-feedback">
+        </div>
+    </div> 
+    <br> 
     <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2024–2025</p>
     </form>

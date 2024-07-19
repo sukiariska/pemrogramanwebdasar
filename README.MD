@@ -37,7 +37,7 @@ Sebuah aplikasi yang dirancang untuk mempermudah proses pengelolaan penyewaan mo
 - Daftar mobil
 - Pesanan
 
-## Pelanggan (3)
+## Costumer (3)
 - Daftar mobil
 - Pesanan
 
