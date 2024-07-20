@@ -1,5 +1,6 @@
 <?php
 include "connect.php";
+$idMobil = (isset( $_POST['idMobil'])) ? htmlentities( $_POST['idMobil']): "" ;
 $JenisMobil = (isset( $_POST['JenisMobil'])) ? htmlentities( $_POST['JenisMobil']): "" ;
 $TahunKeluaran = (isset( $_POST['TahunKeluaran'])) ? htmlentities( $_POST['TahunKeluaran']): "" ;
 $Warna = (isset( $_POST['Warna'])) ? htmlentities( $_POST['Warna']): "" ;
@@ -38,25 +39,25 @@ if($cek === false) {
 
 if($statusUpload == 0){
     $message = '<script>alert("'.$message.'Gambar tidak dapat diupload");
-                window.location="../User"</script>';
+                window.location="../mobil"</script>';
 }else{
-    $select = mysqli_query($conn, "SELECT * FROM tbmobil WHERE JenisMobil = '$JenisMobil'");
+    $select = mysqli_query($conn, "SELECT * FROM tbmobil WHERE idMobil = '$idMobil'");
     if(mysqli_num_rows($select)> 0){
         $message = '<script>alert("Jenis mobil Yang Dimasukkan Telah Ada");
         window.location="../mobil"</script>';
     }else{
         if(move_uploaded_file($_FILES['foto']['tmp_name'], $target_file)){
-    $query = mysqli_query($conn, "INSERT INTO tbmobil (foto, JenisMobil, TahunKeluaran, Warna, Tarif, Status) VALUES ('" . $kode_rand . $_FILES['foto']['name'] . "', '$JenisMobil', '$TahunKeluaran', '$Warna', '$Tarif', '$Status')");
+    $query = mysqli_query($conn, "INSERT INTO tbmobil (idMobil, foto, JenisMobil, TahunKeluaran, Warna, Tarif, Status) VALUES ('" . $kode_rand . $_FILES['foto']['name'] . "', '$idMobil', '$JenisMobil', '$TahunKeluaran', '$Warna', '$Tarif', '$Status')");
             if($query){
         $message = '<script>alert("Data Berhasil Dimasukkan");
-                    window.location="../User"</script>';
+                    window.location="../mobil"</script>';
         }else{
             $message = '<script>alert("Data gagal Dimasukkan");
-                    window.location="../User"</script>';
+                    window.location="../mobil"</script>';
         }
     }else{
         $message = '<script>alert("Maaf terjadi kesalahan File tidak dapat di upload");
-                    window.location="../User"</script>';
+                    window.location="../mobil"</script>';
     }
     }
 }

@@ -50,9 +50,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-4">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglPembayaran" name="TglPembayaran" required>
-    <label for="floatingInput">TglPembayaran</label>
+    <label for="floatingInput">Tanggal Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan TglPembayaran .
+        Masukkan Tanggal Pembayaran .
         </div>
     </div>
     </div>
@@ -71,9 +71,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingInput" placeholder="MetodePembayaran" name="MetodePembayaran" required>
-    <label for="floatingInput">MetodePembayaran</label>
+    <label for="floatingInput">Metode Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan MetodePembayaran .
+        Masukkan Metode Pembayaran .
         </div>
     </div>
     </div>
@@ -127,9 +127,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-4">
     <div class="form-floating mb-3">
     <input disabled type="date" class="form-control" id="floatingInput" placeholder="TglPembayaran" name="TglPembayaran" value="<?php echo $row['TglPembayaran'] ?>">
-    <label for="floatingInput">TglPembayaran</label>
+    <label for="floatingInput">Tanggal Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan TglPembayaran .
+        Masukkan Tanggal Pembayaran .
         </div>
     </div>
     </div>
@@ -148,9 +148,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input disabled type="text" class="form-control" id="floatingInput" placeholder="MetodePembayaran" name="MetodePembayaran" value="<?php echo $row['MetodePembayaran'] ?>">
-    <label for="floatingInput">MetodePembayaran</label>
+    <label for="floatingInput">Metode Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan MetodePembayaran .
+        Masukkan Metode Pembayaran .
         </div>
     </div>
     </div>
@@ -198,9 +198,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-4">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglPembayaran" name="TglPembayaran" required value="<?php echo $row['TglPembayaran'] ?>">
-    <label for="floatingInput">TglPembayaran</label>
+    <label for="floatingInput">Tanggal Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan TglPembayaran .
+        Masukkan Tanggal Pembayaran .
         </div>
     </div>
     </div>
@@ -219,9 +219,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingInput" placeholder="MetodePembayaran" name="MetodePembayaran" required value="<?php echo $row['MetodePembayaran'] ?>">
-    <label for="floatingInput">MetodePembayaran</label>
+    <label for="floatingInput">Metode Pembayaran</label>
     <div class="invalid-feedback">
-        Masukkan MetodePembayaran .
+        Masukkan Metode Pembayaran .
         </div>
     </div>
     </div>

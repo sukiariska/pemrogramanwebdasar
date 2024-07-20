@@ -9,28 +9,28 @@
         </div>
         <div class="carousel-inner rounded">
             <div class="carousel-item active">
-                <img src="assets/img/car1.jpg" class="img-fluid" style="height: 250px; width:1000px; object-fit: cover" alt="...">
+                <img src="assets/img/car1.jpg" class="img-fluid" style="height: 350px; width:1000px; object-fit: cover" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Rental Mobil Terpercaya</h5>
                     <p>Nikmati kenyamanan berkendara dengan mobil berkualitas tinggi.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/img/car13.jpg" class="img-fluid" style="height: 250px; width:1000px; object-fit: cover" alt="...">
+                <img src="assets/img/car13.jpg" class="img-fluid" style="height: 350px; width:1000px; object-fit: cover" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Beragam Pilihan Mobil</h5>
                     <p>Pilihan mobil yang sesuai dengan kebutuhan perjalanan Anda.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/img/car10.jpg" class="img-fluid" style="height: 250px; width:1000px; object-fit: cover" alt="...">
+                <img src="assets/img/car10.jpg" class="img-fluid" style="height: 350px; width:1000px; object-fit: cover" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Proses Mudah dan Cepat</h5>
                     <p>Sewa mobil dengan proses yang mudah dan cepat melalui sistem kami.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="assets/img/car12.jpg" class="img-fluid" style="height: 250px; width:1000px; object-fit: cover" alt="...">
+                <img src="assets/img/car12.jpg" class="img-fluid" style="height: 350px; width:1000px; object-fit: cover" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Keamanan dan Keandalan</h5>
                     <p>Mobil kami selalu dalam kondisi terbaik untuk kenyamanan Anda.</p>
@@ -74,7 +74,7 @@
                     <h6>Pilihan Mobil Luas</h6>
                     <p>Berbagai jenis mobil untuk setiap kebutuhan Anda.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="assets/img/car9.jpg" class="img-fluid rounded mb-2" alt="Harga Terjangkau">
                     <h6>Harga Terjangkau</h6>
                     <p>Harga sewa yang kompetitif dan terjangkau.</p>

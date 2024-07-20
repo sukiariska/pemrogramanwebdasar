@@ -70,9 +70,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglSewa" name="TglSewa" required>
-    <label for="floatingInput">TglSewa</label>
+    <label for="floatingInput">Tanggal Sewa</label>
     <div class="invalid-feedback">
-        Masukkan Tgl Mobil Di Sewa .
+        Masukkan Tanggal  Mobil Di Sewa .
         </div>
     </div>
     </div>
@@ -168,9 +168,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input disabled type="date" class="form-control" id="floatingInput" placeholder="TglSewa" name="TglSewa" value="<?php echo $row['TglSewa'] ?>">
-    <label for="floatingInput">TglSewa</label>
+    <label for="floatingInput">Tanggal Sewa</label>
     <div class="invalid-feedback">
-        Masukkan Tgl Mobil Di Sewa .
+        Masukkan Tanggal Sewa .
         </div>
     </div>
     </div>
@@ -182,7 +182,7 @@ while ($record = mysqli_fetch_array($query)) {
     <input disabled type="text" class="form-control" id="floatingInput" placeholder="Lama" name="Lama" value="<?php echo $row['Lama'] ?>">
     <label for="floatingInput">Lama</label>
     <div class="invalid-feedback">
-        Masukkan Lama Mobil Di Pinjam .
+        Masukkan Lama.
         </div>
     </div>
     </div>
@@ -260,9 +260,9 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglSewa" name="TglSewa" required value="<?php echo $row['TglSewa'] ?>">
-    <label for="floatingInput">TglSewa</label>
+    <label for="floatingInput">Tanggal Sewa</label>
     <div class="invalid-feedback">
-        Masukkan Tanggal Mobil Di Sewa .
+        Masukkan Tanggal Sewa .
         </div>
     </div>
     </div>
@@ -274,7 +274,7 @@ while ($record = mysqli_fetch_array($query)) {
     <input type="text" class="form-control" id="floatingInput" placeholder="Lama" name="Lama" required value="<?php echo $row['Lama'] ?>">
     <label for="floatingInput">Lama</label>
     <div class="invalid-feedback">
-        Masukkan Lama Mobil Di Pinjam .
+        Masukkan Lama .
         </div>
     </div>
     </div>

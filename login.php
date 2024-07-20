@@ -186,15 +186,14 @@
     </div>
     <div>
         <label for="floatingPassword">
-            username : admin@admin.com <br>
-            password : password
         </label>
         <div class="invalid-feedback">
         </div>
     </div> 
-    <br> 
     <button class="btn btn-primary w-100 py-2" type="submit" name="submit_validate" value="abc">Login</button>
-    <p class="mt-5 mb-3 text-body-secondary">&copy; 2024–2025</p>
+    username : admin@admin.com <br>
+    password : sukiarsk <br>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2024-2025</p>
     </form>
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

@@ -3,13 +3,13 @@ include "../proses/connect.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $idKaryawan = $_POST['idKaryawan'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['Alamat'];
+    $Nama = $_POST['Nama'];
+    $Alamat = $_POST['Alamat'];
     $JK = $_POST['JK'];
-    $tglLahir = $_POST['TglLahir'];
-    $noTelepon = $_POST['NoTelepon'];
+    $TglLahir = $_POST['TglLahir'];
+    $NoTelepon = $_POST['NoTelepon'];
 
-    $query = "INSERT INTO tbkaryawan (idKaryawan, Nama, Alamat, JK, TglLahir, NoTelepon) VALUES ('$idKaryawan', '$nama', '$alamat', '$JK', '$tglLahir', '$noTelepon')";
+    $query = "INSERT INTO tbkaryawan (idKaryawan, Nama, Alamat, JK, TglLahir, NoTelepon) VALUES ('$idKaryawan', '$Nama', '$Alamat', '$JK', '$TglLahir', '$NoTelepon')";
     
     if (mysqli_query($conn, $query)) {
         $message = '<script>alert("Costumer Yang Dimasukkan Telah Ada");

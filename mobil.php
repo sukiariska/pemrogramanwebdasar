@@ -52,18 +52,18 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-8">
     <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingInput" placeholder="JenisMobil" name="JenisMobil" required>
-    <label for="floatingInput">JenisMobil</label>
+    <label for="floatingInput">Jenis Mobil</label>
     <div class="invalid-feedback">
-        Masukkan JenisMobil .
+        Masukkan Jenis Mobil .
         </div>
     </div>
     </div>
     <div class="col-lg-4">
     <div class="form-floating mb-3">
     <input type="years" class="form-control" id="floatingInput" placeholder="TahunKeluaran" name="TahunKeluaran" required>
-    <label for="floatingInput">TahunKeluaran</label>
+    <label for="floatingInput">Tahun Keluaran</label>
     <div class="invalid-feedback">
-        Masukkan TahunKeluaran .
+        Masukkan Tahun Keluaran .
         </div>
     </div>
     </div>
@@ -145,12 +145,12 @@ while ($record = mysqli_fetch_array($query)) {
         </div>
     </div>
     </div>
-                <div class="col-lg-8">
-        <div class="input-group mb-3">
-    <input type="file" class="form-control py-3" id="uploadfoto" placeholder="Your file" name="foto" value="<?php echo $row['foto'] ?>">
-    <label class ="input-group-text" for="uploadfoto" >Upload Foto Mobil</label>
+    <div class="col-lg-8">
+    <div class="form-floating mb-3">
+    <input disabled type="file" class="form-control" id="floatingInput" placeholder="Foto" name="Foto" value="<?php echo $row['Foto'] ?>">
+    <label for="floatingInput">Foto</label>
     <div class="invalid-feedback">
-        Masukkan File Foto Mobil.
+        Masukkan Foto .
         </div>
     </div>
     </div>
@@ -160,18 +160,18 @@ while ($record = mysqli_fetch_array($query)) {
                     <div class="col-lg-6">
         <div class="form-floating mb-3">
     <input disabled type="text" class="form-control" id="floatingInput" placeholder="Your JenisMobil" name="JenisMobil" value="<?php echo $row['JenisMobil'] ?>">
-    <label for="floatingInput">JenisMobil</label>
+    <label for="floatingInput">Jenis Mobil</label>
     <div class="invalid-feedback">
-        Masukkan JenisMobil .
+        Masukkan Jenis Mobil .
         </div>
     </div>
     </div>
         <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input disabled type="number" class="form-control" id="floatingInput" placeholder="TahunKeluaran" name="TahunKeluaran" value="<?php echo $row['TahunKeluaran'] ?>">
-    <label for="floatingInput">TahunKeluaran</label>
+    <label for="floatingInput">Tahun Keluaran</label>
     <div class="invalid-feedback">
-        Masukkan TahunKeluaran .
+        Masukkan Tahun Keluaran .
         </div>
     </div>
     </div>
@@ -256,18 +256,18 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-8">
     <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingInput" placeholder="JenisMobil" name="JenisMobil" required value="<?php echo $row['JenisMobil'] ?>">
-    <label for="floatingInput">JenisMobil</label>
+    <label for="floatingInput">Jenis Mobil</label>
     <div class="invalid-feedback">
-        Masukkan JenisMobil .
+        Masukkan Jenis Mobil .
         </div>
     </div>
     </div>
     <div class="col-lg-4">
     <div class="form-floating mb-3">
     <input type="years" class="form-control" id="floatingInput" placeholder="TahunKeluaran" name="TahunKeluaran" required value="<?php echo $row['TahunKeluaran'] ?>">
-    <label for="floatingInput">TahunKeluaran</label>
+    <label for="floatingInput">Tahun Keluaran</label>
     <div class="invalid-feedback">
-        Masukkan TahunKeluaran .
+        Masukkan Tahun Keluaran .
         </div>
     </div>
     </div>
@@ -295,7 +295,7 @@ while ($record = mysqli_fetch_array($query)) {
     </div>
 
     <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-12">
     <div class="form-floating mb-3">
     <input type="text" class="form-control" id="floatingInput" placeholder="Status" name="Status" required value="<?php echo $row['Status'] ?>">
     <label for="floatingInput">Status</label>

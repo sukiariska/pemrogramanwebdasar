@@ -77,18 +77,18 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="col-lg-8">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglLahir" name="TglLahir" required>
-    <label for="floatingInput">TglLahir</label>
+    <label for="floatingInput">Tanggal Lahir</label>
     <div class="invalid-feedback">
-        Masukkan TglLahir .
+        Masukkan Tanggal Lahir .
         </div>
     </div>
     </div>
     <div class="col-lg-4">
         <div class="form-floating mb-3">
     <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxx" name="NoTelepon" required>
-    <label for="floatingInput">NoTelepon</label>
+    <label for="floatingInput">No Telepon</label>
     <div class="invalid-feedback">
-        Masukkan NoTelepon .
+        Masukkan No Telepon .
         </div>
     </div>
     </div>
@@ -154,9 +154,9 @@ while ($record = mysqli_fetch_array($query)) {
     <div class="col-lg-6">
     <div class="form-floating mb-3">
     <input disabled type="text" class="form-control" id="floatingInput" placeholder="JK" name="JK" value="<?php echo $row['JK'] ?>">
-    <label for="floatingInput">JenisKelamin</label>
+    <label for="floatingInput">Jenis Kelamin</label>
     <div class="invalid-feedback">
-        Masukkan JenisKelamin .
+        Masukkan Jenis Kelamin .
         </div>
     </div>
     </div>
@@ -165,19 +165,19 @@ while ($record = mysqli_fetch_array($query)) {
         <div class="row">
         <div class="col-lg-8">
     <div class="form-floating mb-3">
-    <input disabled type="date" class="form-control" id="floatingInput" placeholder="TglLahir" name="TglLahir" value="<?php echo $row['Alamat'] ?>">
-    <label for="floatingInput">TglLahir</label>
+    <input disabled type="date" class="form-control" id="floatingInput" placeholder="TglLahir" name="TglLahir" value="<?php echo $row['TglLahir'] ?>">
+    <label for="floatingInput">Tanggal Lahir</label>
     <div class="invalid-feedback">
-        Masukkan TglLahir .
+        Masukkan Tanggal Lahir .
         </div>
     </div>
     </div>
     <div class="col-lg-4">
         <div class="form-floating mb-3">
-    <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxxx" name="NoTelepon" value="<?php echo $row['Alamat'] ?>">
-    <label for="floatingInput">NoTelepon</label>
+    <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxxx" name="NoTelepon" value="<?php echo $row['NoTelepon'] ?>">
+    <label for="floatingInput">No Telepon</label>
     <div class="invalid-feedback">
-        Masukkan NoTelepon .
+        Masukkan No Telepon .
         </div>
     </div>
     </div>
@@ -227,7 +227,7 @@ while ($record = mysqli_fetch_array($query)) {
     <div class="row">
         <div class="col-lg-6">
     <div class="form-floating mb-3">
-    <input type="tex" class="form-control" id="floatingInput" placeholder="Alamat" name="Alamat" required value="<?php echo $row['Nama'] ?>">
+    <input type="tex" class="form-control" id="floatingInput" placeholder="Alamat" name="Alamat" required value="<?php echo $row['Alamat'] ?>">
     <label for="floatingInput">Alamat</label>
     <div class="invalid-feedback">
         Masukkan Alamat .
@@ -235,36 +235,32 @@ while ($record = mysqli_fetch_array($query)) {
     </div>
     </div>
     <div class="col-lg-6">
-                    <div class="form-floating mb-3">
-                    <select class="form-select" aria-label="Default select example" name="JK" required value="<?php echo $row['JK'] ?>">
-    <option selected hidden value="0">Pilih JenisKelamin</option>
-    <option value="P">Pria</option>
-    <option value="W">Wanita</option>
-        </select>
-        <label for="floatingInput">JenisKelamin</label>
-        <div class="invalid-feedback">
-        Pilih Jenis Kelamin.
+        <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingInput" placeholder="JK" name="JK" required value="<?php echo $row['JK'] ?>">
+    <label for="floatingInput">Jenis Kelamin</label>
+    <div class="invalid-feedback">
+        Masukkan Jenis Kelamin .
         </div>
     </div>
-        </div>
-        </div>
+    </div>
+    </div>
 
         <div class="row">
         <div class="col-lg-8">
     <div class="form-floating mb-3">
     <input type="date" class="form-control" id="floatingInput" placeholder="TglLahir" name="TglLahir" required value="<?php echo $row['TglLahir'] ?>">
-    <label for="floatingInput">TglLahir</label>
+    <label for="floatingInput">Tanggal Lahir</label>
     <div class="invalid-feedback">
-        Masukkan TglLahir .
+        Masukkan Tanggal Lahir .
         </div>
     </div>
     </div>
     <div class="col-lg-4">
         <div class="form-floating mb-3">
     <input type="number" class="form-control" id="floatingInput" placeholder="08xxxxx" name="NoTelepon" required value="<?php echo $row['NoTelepon'] ?>">
-    <label for="floatingInput">NoTelepon</label>
+    <label for="floatingInput">No Telepon</label>
     <div class="invalid-feedback">
-        Masukkan NoTelepon .
+        Masukkan No Telepon .
         </div>
     </div>
     </div>
