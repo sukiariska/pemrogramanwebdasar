@@ -1,57 +1,113 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<div class="col-lg-9 mt-2">
-    <!--Carausel-->
-    
-            
-    <!--Akhir Carausel-->
+<?php
+include 'proses/connect.php';
 
-    <!--Judul-->
-    <div class="card mt-4 border-0 bg-light">
-        <div class="card-body text-center">
-            <h5 class="card-title">SELAMAT DATANG DI RENTAL MOBIL TERBAIK</h5>
-            <p class="card-text">Kami menyediakan solusi rental mobil terbaik untuk kebutuhan perjalanan Anda. Daftar sekarang dan nikmati berbagai penawaran menarik dari kami.</p>
-            <a href="Daftar" class="btn btn-danger">Daftar Sekarang</a>
-        </div>
+$sql = "SELECT c.Nama AS NamaCostumer, k.Nama AS NamaKaryawan, m.JenisMobil, s.TglSewa, s.Lama, s.Total 
+        FROM tbsewa s
+        JOIN tbcostumer c ON s.idCostumer = c.idCostumer
+        JOIN tbkaryawan k ON s.idKaryawan = k.idKaryawan
+        JOIN tbmobil m ON s.idMobil = m.idMobil";
+$result = $conn->query($sql);
+
+$jenisMobil = [];
+$jumlahSewa = [];
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $jenisMobil[] = $row['JenisMobil'];
+        $jumlahSewa[] = $row['Lama'];
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Rental Mobil</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+        }
+        #chart-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Report Rental Mobil</h2>
+    <div id="chart-container">
+        <canvas id="sewaChart"></canvas>
     </div>
-    <!--Akhir Judul-->
 
-    <!--Chart-->
-    <div class="card mt-4 border-0 bg-light">
-        <div class="card-body text-center">
-            <div>
-                <canvas id="myChart"></canvas>
-            </div>
-            <script>
-                const ctx = document.getElementById('myChart');
+    <table>
+        <tr>
+            <th>Nama Costumer</th>
+            <th>Nama Karyawan</th>
+            <th>Nama Mobil</th>
+            <th>Tanggal Sewa</th>
+            <th>Lama Sewa</th>
+            <th>Total</th>
+        </tr>
+        <?php
+        $result->data_seek(0); // reset result pointer to the beginning
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>{$row['NamaCostumer']}</td>
+                        <td>{$row['NamaKaryawan']}</td>
+                        <td>{$row['JenisMobil']}</td>
+                        <td>{$row['TglSewa']}</td>
+                        <td>{$row['Lama']}</td>
+                        <td>{$row['Total']}</td>
+                      </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='7'>No data available</td></tr>";
+        }
+        ?>
+    </table>
 
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
-                        datasets: [{
-                            label: 'Jumlah Penyewaan Mobil',
-                            data: [30, 50, 40, 60, 70, 50],
-                            borderWidth: 1,
-                            backgroundColor: [
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)',
-                                'rgba(255, 99, 132, 0.2)'
-                            ]
-                        }]
-                    },
-                    options: {
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
+    <script>
+        var ctx = document.getElementById('sewaChart').getContext('2d');
+        var sewaChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: <?php echo json_encode($jenisMobil); ?>,
+                datasets: [{
+                    label: 'Lama Sewa',
+                    data: <?php echo json_encode($jumlahSewa); ?>,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
-                });
-            </script>
-        </div>
-    </div>
-    <!--Akhir Chart-->
-</div>
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+<?php
+$conn->close();
+?>

@@ -84,34 +84,50 @@
     </div>
     <!--Akhir Layanan-->
 
-    <!--Testimoni-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="col-lg-12 mt-2">
+
+
+    <!--Chart-->
     <div class="card mt-4 border-0 bg-light">
         <div class="card-body text-center">
-            <h5 class="card-title">Testimoni Pelanggan</h5>
-            <p class="card-text">Apa yang dikatakan pelanggan kami tentang layanan kami.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>"Pelayanan yang sangat baik, mobil dalam kondisi prima. Saya sangat puas!"</p>
-                        <footer class="blockquote-footer">Habibi</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>"Proses penyewaan yang cepat dan mudah. Sangat direkomendasikan!"</p>
-                        <footer class="blockquote-footer">Tasya Putri</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p>"Pilihan mobil yang sangat banyak dan harga yang terjangkau. Luar biasa!"</p>
-                        <footer class="blockquote-footer">Butomo</footer>
-                    </blockquote>
-                </div>
+            <div>
+                <canvas id="myChart"></canvas>
             </div>
+            <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
+                        datasets: [{
+                            label: 'Jumlah Penyewaan Mobil',
+                            data: [30, 50, 40, 60, 70, 50],
+                            borderWidth: 1,
+                            backgroundColor: [
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)',
+                                'rgba(255, 99, 132, 0.2)'
+                            ]
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </div>
     </div>
-    <!--Akhir Testimoni-->
+    <!--Akhir Chart-->
+</div>
 
     <!--Keunggulan-->
     <div class="card mt-4 border-0 bg-light">
